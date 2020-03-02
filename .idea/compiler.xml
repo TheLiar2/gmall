@@ -6,9 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gmall-api" />
-        <module name="gmall-user" />
         <module name="gmall-common-utils" />
+        <module name="gmall-user-service" />
+        <module name="gmall-user" />
+        <module name="gmall-user-web" />
+        <module name="gmall-service-utils" />
+        <module name="gmall-api" />
+        <module name="gmall-web-utils" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,7 +20,11 @@
       <module name="gmall-common-util" target="1.8" />
       <module name="gmall-common-utils" target="1.8" />
       <module name="gmall-parent" target="1.8" />
+      <module name="gmall-service-utils" target="1.8" />
       <module name="gmall-user" target="1.8" />
+      <module name="gmall-user-service" target="1.8" />
+      <module name="gmall-user-web" target="1.8" />
+      <module name="gmall-web-utils" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -25,7 +33,11 @@
       <module name="gmall-common-util" options="-parameters" />
       <module name="gmall-common-utils" options="-parameters" />
       <module name="gmall-parent" options="-parameters" />
+      <module name="gmall-service-utils" options="-parameters" />
       <module name="gmall-user" options="-parameters" />
+      <module name="gmall-user-service" options="-parameters" />
+      <module name="gmall-user-web" options="-parameters" />
+      <module name="gmall-web-utils" options="-parameters" />
     </option>
   </component>
 </project>

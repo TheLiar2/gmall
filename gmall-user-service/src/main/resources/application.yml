@@ -1,0 +1,27 @@
+server:
+  port: 9400
+spring:
+  dubbo:
+    application:
+      name: gmall-user-service
+    registry:
+      address: 192.168.10.100:2181
+    protocol:
+      name: dubbo
+    consumer:
+      check: false # 不检查消费者
+      timeout: 10000
+    base-package: com.gmall.service.impl
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gmall?characterEncoding=UTF-8
+    username: root
+    password: nl1120
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true  #是否开启使用驼峰命名
+#logging:
+#  level:
+#    root: debug

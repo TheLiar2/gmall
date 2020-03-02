@@ -6,7 +6,11 @@
       <module fileurl="file://$PROJECT_DIR$/gmall-api/gmall-api.iml" filepath="$PROJECT_DIR$/gmall-api/gmall-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-common-utils/gmall-common-utils.iml" filepath="$PROJECT_DIR$/gmall-common-utils/gmall-common-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/gmall-parent.iml" filepath="$PROJECT_DIR$/gmall-parent/gmall-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-service-utils/gmall-service-utils.iml" filepath="$PROJECT_DIR$/gmall-service-utils/gmall-service-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-user/gmall-user.iml" filepath="$PROJECT_DIR$/gmall-user/gmall-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-user-service/gmall-user-service.iml" filepath="$PROJECT_DIR$/gmall-user-service/gmall-user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-user-web/gmall-user-web.iml" filepath="$PROJECT_DIR$/gmall-user-web/gmall-user-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-web-utils/gmall-web-utils.iml" filepath="$PROJECT_DIR$/gmall-web-utils/gmall-web-utils.iml" />
     </modules>
   </component>
 </project>

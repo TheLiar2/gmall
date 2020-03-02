@@ -1,0 +1,15 @@
+server:
+  port: 9300
+spring:
+  dubbo:
+    application: gmall-user-web
+    consumer:
+      check: false
+      timeout: 60000
+    registry:
+      address: 192.168.10.100:2181
+      protocol: zookeeper
+    base-package: com.gmall.controller
+#logging:
+#  level:
+#    root: debug
