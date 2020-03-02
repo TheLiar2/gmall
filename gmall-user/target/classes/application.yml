@@ -1,0 +1,14 @@
+server:
+  port: 10086
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gmall?characterEncoding=UTF-8
+    username: root
+    password: nl1120
+  application:
+    name: user
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
