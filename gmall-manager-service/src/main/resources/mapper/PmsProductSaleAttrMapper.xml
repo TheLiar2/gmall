@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gmall.mapper.PmsProductSaleAttrMapper">
+
+    <resultMap id="SpuSaleAttrListCheckBySQL" type="com.gmall.bean.PmsProductSaleAttr" autoMapping="true">
+		<result column="a_id" property="id"></result>
+		<collection property="spuSaleAttrValueList" ofType="com.gmall.bean.PmsProductSaleAttrValue" autoMapping="true">
+			<result column="b_id" property="id"></result>
+		</collection>
+    </resultMap>
+
+    <!--通过spuId确定所有sku销售属性，再通过skuId确定哪个是isChecked的-->
+    <select id="getSpuSaleAttrListCheckBySQL" resultMap="SpuSaleAttrListCheckBySQL">
+        SELECT a.*, b.*,a.id as a_id,b.id as b_id,IF( c.sku_id, 1, 0 ) AS is_checked
+        FROM
+        pms_product_sale_attr a
+        JOIN pms_product_sale_attr_value b ON a.sale_attr_id = b.sale_attr_id
+        AND a.product_id = b.product_id
+        AND a.product_id = #{spuId}
+        LEFT JOIN pms_sku_sale_attr_value c ON b.id = c.sale_attr_value_id
+        AND b.sale_attr_id = c.sale_attr_id
+        AND sku_id = #{skuId}
+        order by b.id;
+    </select>
+
+    <!--获取可来回切换的sku的数据列表-->
+    <select id="selectSkuSaleAttrValueListBySpu" resultMap="SkuSaleAttrValueListBySpu">
+        select a.*,b.*,a.id as a_id,b.id as b_id
+        from pms_sku_info a
+        left join pms_sku_sale_attr_value b
+        on a.id = b.sku_id
+        where a.product_id = #{spuId}
+    </select>
+
+
+    <resultMap id="SkuSaleAttrValueListBySpu" type="com.gmall.bean.PmsSkuInfo" autoMapping="true">
+        <result property="id" column="a_id"/>
+        <collection property="skuSaleAttrValueList" ofType="com.gmall.bean.PmsSkuSaleAttrValue" autoMapping="true">
+            <result property="id" column="b_id"/>
+        </collection>
+    </resultMap>
+
+</mapper>

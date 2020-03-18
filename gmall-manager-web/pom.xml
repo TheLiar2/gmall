@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.gmall</groupId>
+    <artifactId>gmall-manager-web</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <parent>
+        <groupId>com.gmall</groupId>
+        <artifactId>gmall-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <dependencies>
+        <!--引入web-utils依赖-->
+        <dependency>
+            <groupId>com.gmall</groupId>
+            <artifactId>gmall-web-utils</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <!--引入api依赖-->
+        <dependency>
+            <groupId>com.gmall</groupId>
+            <artifactId>gmall-api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--引入fastdfs客户端依赖，如果其他工程需要，可以放到commont-utils去-->
+        <dependency>
+            <groupId>org.csource</groupId>
+            <artifactId>fastdfs-client-java</artifactId>
+            <version>1.29-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+</project>

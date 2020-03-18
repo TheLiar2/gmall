@@ -1,8 +1,5 @@
 server:
   port: 9400
-
-
-
 spring:
   dubbo:
     application:
@@ -15,7 +12,6 @@ spring:
       check: false # 不检查消费者
       timeout: 10000
     base-package: com.gmall.service.impl
-
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/gmall?characterEncoding=UTF-8
